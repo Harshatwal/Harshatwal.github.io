@@ -1,0 +1,77 @@
+.header{
+    width: 100%;
+    background: linear-gradient(yellow,orange);
+    display: flex;
+}
+.header .logo{
+    width: 10%;
+    position: relative;
+}
+.logo img{
+    width: 100%;
+    position: absolute;
+    top: 2%;
+}
+.header .info{
+    width: 60%;
+    position: relative;
+}
+.info ul{
+    list-style-type: none;
+    display: flex;
+}
+.info ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 10px 40px;
+    font-size: 20px;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.header .info ul li:hover a{
+    background-color: white;
+}
+
+ .menu i{
+    font-size: 21px;
+    position: absolute;
+    top: 3%;
+    right: 2%;
+}
+#box{
+    position: absolute;
+    top: 3%;
+    right: 2%;
+}
+#box,.menu{
+    display: none;
+}
+@media(max-width:797px){
+    .info{
+        display: block;
+        position: absolute;
+        background-color: black;
+        width: 100%;
+        top: 100%;
+        left: -120%;
+        transition: 2s;
+    }
+    .menu{
+        display: block;
+        position: absolute;
+        right: 2%;
+    }
+    #box{
+        display: block;
+        position: absolute;
+        right: 1%;
+        top: 1%;
+        height: 25px;
+        width: 25px;
+        opacity: 0;
+    }
+    #box:checked~.info{
+        transform: translateX(120%);
+    }
+}
+
